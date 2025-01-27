@@ -58,14 +58,4 @@ public class ShoplistApiController {
 		return ResponseEntity.ok().<Void>build();
 	}
 	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
 }
