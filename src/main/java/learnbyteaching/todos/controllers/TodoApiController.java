@@ -39,6 +39,7 @@ public class TodoApiController {
 	public ResponseEntity<List<TodoItem>> getAllTodos() {
 		List<TodoItem> todos = todoRepository.findAll();
 		return ResponseEntity.ok(todos);
+//		return todos;
 		//	status 200에 body에 todos 실어보냄
 	}
 	
