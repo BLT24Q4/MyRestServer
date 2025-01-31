@@ -43,7 +43,7 @@ public class ShoplistApiController {
 //	PUT : /api/shoplist/{id} -> 기존 쇼핑 항목 수정
 	@PutMapping("/{id}")
 	public ResponseEntity<ShopItem> updateItem(@RequestBody ShopItem item,
-			@PathVariable("id") Integer id) {
+			@PathVariable Integer id) {
 		item.setId(id);
 		ShopItem updatedItem = shoplistService.updateItem(item);
 		return ResponseEntity.ok(updatedItem);
@@ -53,7 +53,7 @@ public class ShoplistApiController {
 	@DeleteMapping("/{id}")
 	//	Body에 실어 보낼 내용이 없음 -> Void
 	public ResponseEntity<Void> 
-		deleteItem(@PathVariable("id") Integer id) {
+		deleteItem(@PathVariable Integer id) {
 		shoplistService.deleteItem(id);
 		return ResponseEntity.ok().<Void>build();
 	}
